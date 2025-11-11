@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checklist Manifesto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      body {
+        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+          sans-serif;
+        background-color: #f1f5f9;
+      }
+      .a4-surface {
+        background: #fff;
+        box-shadow: 0 25px 50px -12px rgba(30, 41, 59, 0.25);
+        border-radius: 0.5rem;
+      }
+      .scaled-content h2 {
+        font-size: 1.25rem !important;
+      }
+      .scaled-content .checklist-section-label {
+        font-size: 0.75rem !important;
+      }
+      .scaled-content .checklist-item-text,
+      .scaled-content .checklist-meta label,
+      .scaled-content .checklist-meta span,
+      .scaled-content input,
+      .scaled-content select,
+      .scaled-content button {
+        font-size: 0.6rem !important;
+      }
+      .no-print {
+        display: block;
+      }
+      @media print {
+        body {
+          background: #fff;
+        }
+        .no-print {
+          display: none !important;
+        }
+        .print-area {
+          box-shadow: none !important;
+          border-radius: 0 !important;
+          margin: 0 !important;
+          width: 100% !important;
+        }
+      }
+      .pdf-generating .print-area {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        margin: 0 !important;
+        box-shadow: none !important;
+      }
+      .pdf-generating.pdf-portrait .print-area {
+        width: 210mm !important;
+        height: 297mm !important;
+      }
+      .pdf-generating.pdf-landscape .print-area {
+        width: 297mm !important;
+        height: 210mm !important;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen">
+    <div id="root"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.22.20/babel.min.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQn1V1S7n1HULICwhf66A1VpzwuWgxeqmoeZaZX6mE6xPD58Ll35H5TADaBrZEcD3xKhsR4H3vQ9N9Fo2iw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-/GvBCSeN5teLoI0lp4rWuIwoMvVJE9idh+NangNh4tW7x1YgnSUZXoqBYwygJyI072QtdgQXl3kEwe46X3GDZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@18.2.0?dev",
+          "react-dom/client": "https://esm.sh/react-dom@18.2.0/client?dev"
+        }
+      }
+    </script>
+    <script type="text/babel" data-presets="react,typescript" data-type="module" src="/types.ts"></script>
+    <script type="text/babel" data-presets="react,typescript" data-type="module" src="/hooks/useKeystrokeSound.ts"></script>
+    <script type="text/babel" data-presets="react,typescript" data-type="module" src="/components/icons/PlusIcon.tsx"></script>
+    <script type="text/babel" data-presets="react,typescript" data-type="module" src="/components/icons/TrashIcon.tsx"></script>
+    <script type="text/babel" data-presets="react,typescript" data-type="module" src="/components/icons/XIcon.tsx"></script>
+    <script type="text/babel" data-presets="react,typescript" data-type="module" src="/components/ChecklistItem.tsx"></script>
+    <script type="text/babel" data-presets="react,typescript" data-type="module" src="/components/Checklist.tsx"></script>
+    <script type="text/babel" data-presets="react,typescript" data-type="module" src="/App.tsx"></script>
+    <script type="text/babel" data-presets="react,typescript" data-type="module" src="/index.tsx"></script>
+  </body>
+</html>
