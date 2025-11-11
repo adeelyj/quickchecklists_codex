@@ -1,0 +1,17 @@
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App';
+
+declare global {
+  interface Window {
+    jspdf: {
+      jsPDF: new (orientation?: string, unit?: string, format?: string | number[]) => any;
+    };
+  }
+}
+
+const container = document.getElementById('root');
+if (container) {
+  const root = createRoot(container);
+  root.render(<App />);
+}
