@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ChecklistItemType } from '../types.ts';
-import TrashIcon from './icons/TrashIcon.tsx';
+import { ChecklistItemType } from '../types';
+import TrashIcon from './icons/TrashIcon';
 
 type ChecklistItemProps = {
   item: ChecklistItemType;

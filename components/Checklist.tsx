@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { ChecklistStateType, ChecklistItemType } from '../types.ts';
-import ChecklistItem from './ChecklistItem.tsx';
-import PlusIcon from './icons/PlusIcon.tsx';
-import XIcon from './icons/XIcon.tsx';
+import { ChecklistStateType, ChecklistItemType } from '../types';
+import ChecklistItem from './ChecklistItem';
+import PlusIcon from './icons/PlusIcon';
+import XIcon from './icons/XIcon';
 
 interface ChecklistProps {
   checklist: ChecklistStateType;

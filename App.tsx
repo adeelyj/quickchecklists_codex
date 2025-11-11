@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import Checklist from './components/Checklist.tsx';
-import PlusIcon from './components/icons/PlusIcon.tsx';
-import useKeystrokeSound from './hooks/useKeystrokeSound.ts';
-import { ChecklistStateType } from './types.ts';
+import Checklist from './components/Checklist';
+import PlusIcon from './components/icons/PlusIcon';
+import useKeystrokeSound from './hooks/useKeystrokeSound';
+import { ChecklistStateType } from './types';
 
 declare const html2canvas: any;
 
